@@ -12,26 +12,39 @@
       box-sizing: border-box;
     }
 
+    /* Fix mobile viewport height issues */
     html, body {
       height: 100%;
       width: 100%;
       overflow-x: hidden;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+      background-color: #0f172a; /* Optional: match your body background */
     }
 
     body {
-      min-height: 100vh;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+      font-family: 'Open Sans', sans-serif;
+      min-height: 100vh; /* fallback */
+      position: relative;
     }
 
+    /* Let section expand naturally but fill viewport min height */
     section {
+      min-height: 100vh; /* fill at least viewport height */
       height: auto;
-      overflow: hidden;
+      overflow: visible; /* Allow natural scrolling */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 5rem 1rem; /* py-20 px-4 approx */
+      text-align: center;
     }
 
     .container {
-      max-width: 100%; /* Prevent container from causing overflow */
+      max-width: 100%; /* prevent overflow */
       overflow: visible;
+      margin: 0 auto;
     }
 
     .gradient-text {
@@ -64,7 +77,7 @@
   </style>
 </head>
 <body class="text-white font-sans">
-  <section class="py-20 md:py-32 px-4 text-center">
+  <section>
     <div class="container mx-auto">
       <h2 class="text-4xl md:text-6xl font-extrabold mb-6">
         Next-Generation <span class="gradient-text">Cybersecurity</span>
