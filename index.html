@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>PrimeSec Cybersecurity</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Reset & container scroll fixes */
+    html, body {
+      padding: 0;
+      margin: 0;
+      height: 100vh;
+      min-height: 100vh; /* Extra vigilance for mobile browser inconsistencies */
+      width: 100%;
+      overflow: hidden;  /* Prevent unwanted scrollbars */
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #0f172a; /* Optional dark background */
+      -webkit-overflow-scrolling: touch;
+      position: relative;
+    }
+
+    section {
+      height: 100vh;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .gradient-text {
+      background: linear-gradient(to right, #645094, #3E417D, #7BEEF6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: text-gradient-shift 4s ease-in-out infinite alternate;
+      background-size: 200% auto;
+    }
+
+    .bg-custom-gradient {
+      background: linear-gradient(135deg, #645094 0%, #3E417D 50%, #7BEEF6 100%);
+      animation: button-pulse 2s ease-in-out infinite alternate;
+      background-size: 200% auto;
+    }
+
+    .bg-custom-gradient:hover {
+      opacity: 0.9;
+    }
+
+    @keyframes button-pulse {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    @keyframes text-gradient-shift {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body class="text-white">
+  <section>
+    <h2 class="text-4xl md:text-6xl font-extrabold mb-6">
+      Next-Generation <span class="gradient-text">Cybersecurity</span>
+    </h2>
+    <p class="text-lg md:text-xl text-gray-300 max-w-xl mx-auto">
+      Protecting your digital assets with cutting-edge technology and expert strategies. PrimeSec offers comprehensive security solutions tailored to your business needs.
+    </p>
+    <div class="button-container">
+      <a href="#services"
+         class="bg-custom-gradient text-white font-semibold py-3 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105">
+        Our Services
+      </a>
+      <a href="#contact"
+         class="text-cyan-400 border-2 border-cyan-400 font-semibold py-3 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105 hover:bg-cyan-400 hover:text-gray-900">
+        Request a Demo
+      </a>
+    </div>
+  </section>
+</body>
+</html>
